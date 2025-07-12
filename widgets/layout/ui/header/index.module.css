@@ -1,10 +1,26 @@
 .root {
   @mixin responsive padding-inline, 18, 30;
   @mixin responsive padding-block, 6, 6;
+}
 
+.wrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.themeButton,
+.authButton {
+  position: absolute;
+}
+
+.authButton {
+  right: 0;
+}
+
+.themeButton {
+  left: 0;
 }
 
 html[data-theme="light"] {

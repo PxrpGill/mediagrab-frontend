@@ -7,9 +7,11 @@ import { ProjectTitle } from "./project-title";
 export const Header = () => {
   return (
     <header className={css.root}>
-      <ThemeButton />
-      <ProjectTitle className={css.title} />
-      <AuthButton />
+      <div className={css.wrapper}>
+        <ThemeButton className={css.themeButton} />
+        <ProjectTitle className={css.title} />
+        <AuthButton className={css.authButton} />
+      </div>
     </header>
   );
 };
