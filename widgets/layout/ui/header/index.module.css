@@ -1,0 +1,20 @@
+.root {
+  @mixin responsive padding-inline, 18, 30;
+  @mixin responsive padding-block, 6, 6;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+html[data-theme="light"] {
+  .root {
+    background-color: var(--header-background-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .root {
+    background-color: var(--header-background-dark);
+  }
+}

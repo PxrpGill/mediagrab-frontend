@@ -1,0 +1,29 @@
+.root {
+  @mixin responsive padding, 10, 10;
+
+  display: block;
+  height: fit-content;
+
+  border-radius: 7px;
+}
+
+.icon {
+  @mixin responsive width, 24, 24;
+  @mixin responsive height, 24, 24;
+}
+
+html[data-theme="light"] {
+  .root {
+    background-color: var(--header-panel-background-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .root {
+    background-color: var(--header-panel-background-dark);
+  }
+
+  .icon path {
+    fill: var(--text-color-dark);
+  }
+}

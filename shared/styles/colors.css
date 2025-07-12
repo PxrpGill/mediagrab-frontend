@@ -1,4 +1,13 @@
 :root {
   --main-color-dark: #141414;
   --main-color-light: #edeef0;
+
+  --text-color-light: #000;
+  --text-color-dark: #fff;
+
+  --header-background-dark: #222222;
+  --header-background-light: #fff;
+
+  --header-panel-background-dark: #424242;
+  --header-panel-background-light: #d3d3d3;
 }
