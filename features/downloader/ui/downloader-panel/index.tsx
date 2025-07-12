@@ -2,6 +2,7 @@ import cx from "clsx";
 
 import { ImageElement } from "./image-element";
 import css from "./index.module.css";
+import { InstrumentPanel } from "./instrument-panel";
 import { PostName } from "./post-name";
 
 type DownloaderPanelProps = {
@@ -14,6 +15,7 @@ export const DownloaderPanel = ({ isClicked }: DownloaderPanelProps) => {
       <ImageElement />
       <div className={css.rightPanel}>
         <PostName title="Сколько стоят деньги?" author="Хаски" />
+        <InstrumentPanel />
       </div>
     </section>
   );

@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import cx from "clsx";
 import parser from "html-react-parser";
-import clsx from "clsx";
 
 import { HEADER_DATA } from "@/widgets/layout/models/header.constants";
+
 import css from "./index.module.css";
 
 type ProjectTitleProps = {
@@ -13,8 +14,8 @@ export const ProjectTitle = ({ className }: ProjectTitleProps) => {
   const { projectIcon, projectName } = HEADER_DATA;
 
   return (
-    <div className={clsx(css.root, className)}>
-      <img className={css.icon} src={projectIcon} />
+    <div className={cx(css.root, className)}>
+      <img className={css.icon} src={projectIcon} draggable={false} />
       <h1 className={css.title}>{parser(projectName)}</h1>
     </div>
   );
