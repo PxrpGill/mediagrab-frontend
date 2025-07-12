@@ -11,7 +11,7 @@ export const useToggleModal = ({ isOpen }: UseToggleModalProps) => {
     const currentRef = modalRef.current;
 
     if (currentRef && isOpen) {
-      currentRef?.showModal();
+      currentRef.showModal();
     } else {
       currentRef?.close();
     }

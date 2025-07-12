@@ -6,11 +6,21 @@
 
   left: 50%;
   top: 50%;
-  translate: -50% -50%;
 
   max-width: unset;
   max-height: unset;
   outline: none;
+  visibility: hidden;
+  transition: all ease 0.4s !important;
+
+  opacity: 0;
+  translate: -50% -70%;
+
+  &.active {
+    opacity: 1;
+    translate: -50% -50%;
+    visibility: visible;
+  }
 }
 
 .root::backdrop {

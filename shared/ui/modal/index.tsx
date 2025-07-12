@@ -23,7 +23,10 @@ export const Modal = ({
   const { modalRef } = useToggleModal({ isOpen });
 
   return (
-    <dialog ref={modalRef} className={cx(css.root, className)}>
+    <dialog
+      ref={modalRef}
+      className={cx(css.root, className, { [css.active]: isOpen })}
+    >
       <button className={css.closeButton} onClick={toggleClose}>
         <CrossSVG className={css.cross} />
       </button>
