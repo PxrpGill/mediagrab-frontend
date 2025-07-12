@@ -1,6 +1,15 @@
 @import "./reset.css";
+@import "./colors.css";
 
 html,
 body {
   font-size: 1vw;
+}
+
+html[data-theme="light"] body {
+  background-color: var(--main-color-light);
+}
+
+html[data-theme="dark"] body {
+  background-color: var(--main-color-dark);
 }

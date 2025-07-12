@@ -1,6 +1,7 @@
 import "@/shared/styles/global.css";
 
 import { MontserratFonts } from "@/shared";
+import { ThemeProvider } from "@/shared";
 
 const RootLayout = ({
   children,
@@ -9,7 +10,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={MontserratFonts.className}>{children}</body>
+      <body className={MontserratFonts.className}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 };
