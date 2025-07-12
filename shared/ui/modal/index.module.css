@@ -40,3 +40,7 @@
     }
   }
 }
+
+html[data-theme="dark"] .cross path {
+  stroke: var(--text-color-dark);
+}

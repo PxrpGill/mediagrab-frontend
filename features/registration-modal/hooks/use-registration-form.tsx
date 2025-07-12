@@ -12,7 +12,7 @@ export const useRegistrationForm = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm<RegistrationInputsType>({
-    mode: "onBlur",
+    mode: "onChange",
   });
 
   const inputs = [

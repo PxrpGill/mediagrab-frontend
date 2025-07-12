@@ -1,0 +1,57 @@
+.root {
+  @mixin responsive gap, 4, 11;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  @mixin responsive-font 16, 16, 1, 400;
+
+  cursor: default;
+}
+
+.input {
+  @mixin responsive padding-inline, 10, 10;
+  @mixin responsive padding-block, 18, 18;
+  @mixin responsive border-radius, 12, 12;
+  @mixin responsive-font 14, 16, 1, 400;
+  @mixin responsive --border-width, 2, 2;
+
+  border: var(--border-width) solid var(--input-border);
+  width: 100%;
+  outline: none;
+  box-shadow: none;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px inherit inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+    font-size: inherit !important;
+    font-family: inherit !important;
+  }
+}
+
+html[data-theme="light"] .input {
+  caret-color: var(--text-color-light);
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--text-color-light) !important;
+  }
+}
+
+html[data-theme="dark"] .input {
+  caret-color: var(--text-color-dark);
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--text-color-dark) !important;
+  }
+}

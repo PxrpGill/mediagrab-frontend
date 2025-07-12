@@ -1,0 +1,8 @@
+html[data-theme="light"] {
+}
+
+html[data-theme="dark"] {
+  .root {
+    background-color: var(--modal-background-dark);
+  }
+}

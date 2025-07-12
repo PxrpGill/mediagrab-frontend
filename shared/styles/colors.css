@@ -19,4 +19,10 @@
 
   --downloader-background-light: #edeef0;
   --downloader-background-dark: #424242;
+
+  --input-border: #666666;
+
+  --modal-background-dark: #424242;
+
+  --submit-background-button-dark: #e1e0e6;
 }

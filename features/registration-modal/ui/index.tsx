@@ -5,6 +5,7 @@ import { useLayoutContext } from "@/shared";
 import { Modal } from "@/shared/ui/modal";
 
 import { RegistrationForm } from "./form";
+import css from "./index.module.css";
 
 export const RegistrationModal = () => {
   const { isRegistrationModalOpen, toggleRegistrationModalOpen } =
@@ -15,7 +16,11 @@ export const RegistrationModal = () => {
   }, [toggleRegistrationModalOpen]);
 
   return (
-    <Modal isOpen={isRegistrationModalOpen} toggleClose={handleClose}>
+    <Modal
+      isOpen={isRegistrationModalOpen}
+      toggleClose={handleClose}
+      className={css.root}
+    >
       <RegistrationForm />
     </Modal>
   );
