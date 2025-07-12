@@ -1,13 +1,10 @@
 .root {
+  @mixin responsive border-radius, 128, 128;
   @mixin transition translate;
   @mixin responsive width, 350, 667;
 
   display: flex;
   align-items: stretch;
-}
-
-.root:has(input:focus) {
-  translate: 0% -15%;
 }
 
 .input {
@@ -60,6 +57,10 @@
 }
 
 html[data-theme="light"] {
+  .root {
+    box-shadow: 0 4px 4px 0 #00000025;
+  }
+
   .input {
     background-color: var(--search-background-light);
     caret-color: var(--text-color-light);

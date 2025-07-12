@@ -1,0 +1,28 @@
+.root {
+  @mixin responsive gap, 15, 15;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @mixin responsive-font 14, 24, 1, 500;
+}
+
+.author {
+  @mixin responsive-font 14, 20, 1, 500;
+}
+
+html[data-theme="light"] {
+  .title,
+  .author {
+    color: var(--text-color-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .title,
+  .author {
+    color: var(--text-color-dark);
+  }
+}
