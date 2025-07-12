@@ -10,4 +10,10 @@
 
   --header-panel-background-dark: #424242;
   --header-panel-background-light: #d3d3d3;
+
+  --search-background-dark: #424242;
+  --search-background-light: #edeef0;
+
+  --search-button-background-dark: #222222;
+  --search-button-background-light: #222222;
 }

@@ -1,5 +1,5 @@
 import { AuthButton } from "@/entities";
-import { ThemeButton } from "@/features/theme-button";
+import { ThemeButton } from "@/features";
 
 import css from "./index.module.css";
 import { ProjectTitle } from "./project-title";

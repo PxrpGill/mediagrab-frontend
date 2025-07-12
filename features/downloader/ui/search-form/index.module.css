@@ -1,0 +1,49 @@
+.root {
+  display: flex;
+  align-items: stretch;
+}
+
+.input {
+  @mixin responsive --border-radius, 128, 128;
+  @mixin responsive padding-block, 19, 29;
+  @mixin responsive padding-inline, 26, 26;
+
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.searchButton {
+  @mixin responsive width, 60, 60;
+  @mixin responsive --border-radius, 128, 128;
+
+  height: auto;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.searchIcon {
+  @mixin responsive width, 22, 22;
+  @mixin responsive height, 22, 22;
+}
+
+html[data-theme="light"] {
+  .input {
+    background-color: var(--search-background-light);
+    caret-color: var(--text-color-light);
+    color: var(--text-color-light);
+  }
+
+  .searchButton {
+    background-color: var(--search-button-background-dark);
+  }
+}
+
+html[data-theme="dark"] {
+  .input {
+    background-color: var(--search-background-dark);
+    caret-color: var(--text-color-dark);
+    color: var(--text-color-dark);
+  }
+
+  .searchButton {
+    background-color: var(--search-button-background-dark);
+  }
+}
