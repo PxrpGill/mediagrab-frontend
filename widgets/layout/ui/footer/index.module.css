@@ -44,11 +44,14 @@
 .githubLink,
 .vkIcon,
 .youtubeIcon {
-  @mixin transition opacity;
+  @mixin transitionOptions;
+
+  transition-property: opacity translate;
 
   @media (hover: hover) {
     &:hover {
       opacity: 0.6;
+      translate: 0% -10%;
     }
   }
 }

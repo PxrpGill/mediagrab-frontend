@@ -1,8 +1,13 @@
 .root {
+  @mixin transition translate;
   @mixin responsive width, 350, 667;
 
   display: flex;
   align-items: stretch;
+}
+
+.root:has(input:focus) {
+  translate: 0% -15%;
 }
 
 .input {
@@ -15,6 +20,7 @@
 }
 
 .searchButton {
+  @mixin transition opacity;
   @mixin responsive width, 60, 60;
   @mixin responsive --border-radius, 128, 128;
 
@@ -22,6 +28,12 @@
   flex-shrink: 0;
   height: auto;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
 
 .searchIcon {
