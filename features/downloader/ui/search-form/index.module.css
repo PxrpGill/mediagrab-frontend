@@ -1,10 +1,17 @@
 .root {
+  @mixin transition translate, 0.5s;
   @mixin responsive border-radius, 128, 128;
   @mixin transition translate;
   @mixin responsive width, 350, 667;
 
   display: flex;
   align-items: stretch;
+
+  translate: 0% 120%;
+
+  &.active {
+    translate: 0% 0%;
+  }
 }
 
 .input {

@@ -16,7 +16,7 @@ export const Downloader = () => {
 
   return (
     <section className={css.root}>
-      <SearchForm handleClick={handleClick} />
+      <SearchForm handleClick={handleClick} isClicked={isClicked} />
       <DownloaderPanel isClicked={isClicked} />
     </section>
   );
