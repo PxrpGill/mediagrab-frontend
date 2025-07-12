@@ -1,0 +1,70 @@
+.paragraph,
+.list,
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.paragraph {
+  @mixin responsive gap, 8, 7;
+}
+
+.list {
+  @mixin responsive gap, 13, 13;
+}
+
+.githubIcon {
+  @mixin responsive width, 31, 31;
+  @mixin responsive height, 30, 30;
+}
+
+.vkIcon {
+  @mixin responsive width, 30, 30;
+}
+
+.youtubeIcon {
+  @mixin responsive width, 43, 43;
+}
+
+.githubLink[href] {
+  @mixin responsive-font 16, 16, 1, 700;
+
+  text-decoration: underline;
+}
+
+.githubIcon,
+.githubLink,
+.vkIcon,
+.youtubeIcon {
+  @mixin transition opacity;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+html[data-theme="dark"] {
+  .githubLink {
+    color: var(--text-color-dark);
+  }
+}
+
+html[data-theme="light"] {
+  .githubLink {
+    color: var(--text-color-light);
+  }
+
+  .githubIcon path {
+    fill: var(--text-color-light);
+  }
+}

@@ -13,3 +13,9 @@ html[data-theme="light"] body {
 html[data-theme="dark"] body {
   background-color: var(--main-color-dark);
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
