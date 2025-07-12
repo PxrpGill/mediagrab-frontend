@@ -1,0 +1,34 @@
+.pcVersion {
+  @mixin responsive gap, 13, 13;
+  @mixin responsive padding-block, 8, 8;
+  @mixin responsive padding-inline, 10, 15;
+  @mixin responsive border-radius, 128, 128;
+
+  align-items: center;
+  display: flex;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.icon {
+  @mixin responsive width, 36, 20;
+  @mixin responsive height, 36, 20;
+}
+
+html[data-theme="light"] {
+  .pcVersion {
+    background-color: var(--header-panel-background-light);
+  }
+
+  .icon path {
+    fill: var(--text-color-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .pcVersion {
+    background-color: var(--header-panel-background-dark);
+  }
+}

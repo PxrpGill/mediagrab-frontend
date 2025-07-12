@@ -1,3 +1,4 @@
+import { AuthButton } from "@/entities";
 import { ThemeButton } from "@/features/theme-button";
 
 import css from "./index.module.css";
@@ -8,6 +9,7 @@ export const Header = () => {
     <header className={css.root}>
       <ThemeButton />
       <ProjectTitle className={css.title} />
+      <AuthButton />
     </header>
   );
 };

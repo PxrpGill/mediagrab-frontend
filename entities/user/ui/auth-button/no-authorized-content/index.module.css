@@ -1,27 +1,25 @@
 .root {
-  @mixin responsive gap, 9, 2;
+  @mixin responsive gap, 5, 5;
 
   display: flex;
   align-items: center;
 }
 
-.icon {
-  @mixin responsive width, 68, 68;
-  @mixin responsive height, 68, 68;
-}
-
-.title {
-  @mixin responsive-font 24, 48, 1, 700;
+.root,
+.button {
+  @mixin responsive-font 16, 16, 1, 700;
 }
 
 html[data-theme="light"] {
-  .title {
+  .slash,
+  .button {
     color: var(--text-color-light);
   }
 }
 
 html[data-theme="dark"] {
-  .title {
+  .slash,
+  .button {
     color: var(--text-color-dark);
   }
 }
