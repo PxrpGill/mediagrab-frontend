@@ -10,6 +10,16 @@
   @mixin responsive-font 16, 16, 1, 700;
 }
 
+.button {
+  @mixin transition opacity;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}
+
 html[data-theme="light"] {
   .slash,
   .button {

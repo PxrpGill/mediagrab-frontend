@@ -1,5 +1,6 @@
 .root {
   @mixin responsive padding, 10, 10;
+  @mixin transition background-color;
 
   display: block;
   height: fit-content;
@@ -10,17 +11,41 @@
 .icon {
   @mixin responsive width, 24, 24;
   @mixin responsive height, 24, 24;
+
+  path {
+    @mixin transition fill;
+  }
 }
 
 html[data-theme="light"] {
   .root {
     background-color: var(--header-panel-background-light);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--header-panel-background-dark);
+
+        .icon path {
+          fill: var(--text-color-dark);
+        }
+      }
+    }
   }
 }
 
 html[data-theme="dark"] {
   .root {
     background-color: var(--header-panel-background-dark);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--header-panel-background-light);
+
+        .icon path {
+          fill: var(--text-color-light);
+        }
+      }
+    }
   }
 
   .icon path {
