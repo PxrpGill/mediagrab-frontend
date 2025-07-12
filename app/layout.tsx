@@ -18,7 +18,7 @@ const RootLayout = ({
           sizes="180x180"
           href="/assets/favicons/apple-touch-icon.png"
         />
-         <link
+        <link
           rel="icon"
           type="image/png"
           sizes="32x32"
