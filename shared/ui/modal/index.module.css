@@ -2,6 +2,7 @@
   @mixin responsive padding-inline, 15, 40;
   @mixin responsive padding-block, 15, 48;
   @mixin responsive border-radius, 24, 24;
+  @mixin responsive width, 350, 486;
 
   left: 50%;
   top: 50%;
@@ -9,6 +10,7 @@
 
   max-width: unset;
   max-height: unset;
+  outline: none;
 }
 
 .root::backdrop {
@@ -18,4 +20,23 @@
 .cross {
   @mixin responsive width, 16, 30;
   @mixin responsive height, 16, 30;
+
+  path {
+    @mixin transition stroke;
+  }
+}
+
+.closeButton {
+  @mixin responsive margin-inline, 30, 30;
+  @mixin responsive margin-block, 20, 15;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @media (hover: hover) {
+    &:hover .cross path {
+      stroke: red;
+    }
+  }
 }
