@@ -1,4 +1,28 @@
 .root {
+  @mixin transitionOptions;
   @mixin responsive padding-block, 15, 30;
   @mixin responsive padding-inline, 15, 40;
+  @mixin responsive width, 370, 680;
+  @mixin responsive border-radius, 60, 60;
+
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity visibility;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+html[data-theme="light"] {
+  .root {
+    background-color: var(--downloader-background-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .root {
+    background-color: var(--downloader-background-dark);
+  }
 }
