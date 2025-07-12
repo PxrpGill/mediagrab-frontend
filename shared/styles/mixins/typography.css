@@ -1,0 +1,9 @@
+@define-mixin responsive-font $mobile-size, $desktop-size, $line-height, $font-weight {
+    font-size: calc($(desktop-size)rem / 14.4);
+    line-height: $line-height;
+    font-weight: $font-weight;
+
+    @media (max-width: 767px) {
+        font-size: calc($(mobile-size)rem / 3.9);
+    }
+}
