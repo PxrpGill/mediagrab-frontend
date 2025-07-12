@@ -1,0 +1,21 @@
+.root {
+  @mixin responsive padding-inline, 15, 40;
+  @mixin responsive padding-block, 15, 48;
+  @mixin responsive border-radius, 24, 24;
+
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+
+  max-width: unset;
+  max-height: unset;
+}
+
+.root::backdrop {
+  backdrop-filter: blur(0.4rem);
+}
+
+.cross {
+  @mixin responsive width, 16, 30;
+  @mixin responsive height, 16, 30;
+}
