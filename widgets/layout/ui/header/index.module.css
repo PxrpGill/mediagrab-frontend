@@ -1,6 +1,8 @@
 .root {
   @mixin responsive padding-inline, 18, 30;
   @mixin responsive padding-block, 6, 6;
+  
+  z-index: 100;
 }
 
 .wrapper {
