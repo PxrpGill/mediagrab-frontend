@@ -7,6 +7,7 @@ type ButtonProps = PropsWithChildren & {
   className?: string;
   type?: "button" | "reset" | "submit";
   disabled?: boolean;
+  onClick?: () => void;
 };
 
 export const ModalButton = ({ className, children, ...props }: ButtonProps) => {

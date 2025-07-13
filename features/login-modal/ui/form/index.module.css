@@ -25,11 +25,31 @@
     cursor: not-allowed;
   }
 }
+
+.registerButton {
+  @mixin transition opacity;
+  @mixin responsive-font 20, 22, 1, 500;
+
+  opacity: 0.6;
+  width: 100%;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.separator {
+  @mixin responsive padding-block, 24, 24;
+}
+
 html[data-theme="dark"] {
   .root {
     color: var(--text-color-dark);
   }
 
+  .registerButton,
   .submitButton {
     background-color: var(--submit-background-button-dark);
     color: var(--text-color-light);

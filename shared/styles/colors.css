@@ -25,4 +25,9 @@
   --modal-background-dark: #424242;
 
   --submit-background-button-dark: #e1e0e6;
+
+  --separator-dark: #666666;
+  --separator-light: #000;
+
+  --separator-text-dark: #a6a6a6;
 }

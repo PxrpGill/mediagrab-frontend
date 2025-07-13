@@ -1,0 +1,28 @@
+.root {
+  @mixin responsive gap, 16, 23;
+
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.line {
+  @mixin responsive height, 2, 2;
+
+  width: 100%;
+}
+
+.text {
+  @mixin responsive-font 16, 16, 1, 500;
+}
+
+html[data-theme="dark"] {
+  .text {
+    color: var(--separator-text-dark);
+  }
+
+  .line {
+    background-color: var(--separator-dark);
+  }
+}
