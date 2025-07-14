@@ -41,3 +41,9 @@ html[data-theme="dark"] {
     background-color: var(--downloader-background-dark);
   }
 }
+
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

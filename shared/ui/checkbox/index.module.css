@@ -1,0 +1,33 @@
+.root {
+  @mixin responsive gap, 6, 6;
+
+  align-items: center;
+  display: flex;
+  width: fit-content;
+}
+
+.checkbox {
+  @mixin responsive width, 32, 32;
+  @mixin responsive height, 32, 32;
+
+  border-radius: 100%;
+  appearance: none;
+  background-color: var(--checkbox-dark);
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox:checked::after {
+  @mixin responsive width, 16, 16;
+  @mixin responsive height, 12, 12;
+
+  position: absolute;
+  content: "";
+
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+
+  background-image: url("/assets/icons/check-mark.svg");
+  background-size: 100%;
+}
