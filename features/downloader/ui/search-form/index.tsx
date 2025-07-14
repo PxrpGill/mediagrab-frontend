@@ -5,9 +5,10 @@ import { SEARCH_FORM_CONSTANTS } from "@/features/downloader/models/search-form.
 import SearchIcon from "@/public/assets/icons/search.svg";
 
 import css from "./index.module.css";
+import { MouseEvent } from "react";
 
 type SearchFormProps = {
-  handleClick: () => void;
+  handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
   isClicked: boolean;
 };
 
