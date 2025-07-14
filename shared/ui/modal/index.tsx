@@ -25,7 +25,7 @@ export const Modal = ({
   return (
     <dialog
       ref={modalRef}
-      className={cx(css.root, className, { [css.active]: isOpen })}
+      className={cx(css.root, className, { [css.visible]: isOpen })}
     >
       <button className={css.closeButton} onClick={toggleClose}>
         <CrossSVG className={css.cross} />
