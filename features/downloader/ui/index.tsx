@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 
 import { DownloaderPanel } from "./downloader-panel";
 import css from "./index.module.css";
@@ -9,7 +9,7 @@ import { SearchForm } from "./search-form";
 export const Downloader = () => {
   const [isClicked, setClicked] = useState<boolean>(false);
 
-  const handleClick = (event: MouseEvent) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     setClicked((prev) => !prev);
   };
