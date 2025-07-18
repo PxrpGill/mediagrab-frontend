@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  align-items: stretch;
+}
+
+.button {
+  @mixin responsive-font 14, 14, 2, 700;
+  @mixin responsive padding-inline, 10, 10;
+  @mixin responsive padding-block, 2, 2;
+  @mixin responsive --border-radius, 30, 30;
+
+  background-color: var(--button-background);
+  color: var(--checkbox-label-dark);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.dropdown {
+  @mixin responsive width, 32, 32;
+
+  height: auto;
+
+  button[data-item="main"] {
+    @mixin responsive --radius, 30, 30;
+
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+}
+
+.icon {
+  @mixin responsive width, 8, 8;
+  @mixin responsive height, 14, 14;
+
+  rotate: 180deg;
+}
+
+html[data-theme="light"] {
+  .dropdown button {
+    background-color: var(--dropdown-button-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .dropdown button {
+    background-color: var(--dropdown-button-dark);
+  }
+}

@@ -1,0 +1,30 @@
+.root {
+  @mixin responsive width, 240, 240;
+  @mixin responsive border-radius, 15, 15;
+
+  overflow: hidden;
+}
+
+html[data-theme="light"] {
+  .root {
+    background-color: var(--dropdown-background-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .root {
+    background-color: var(--dropdown-background-dark);
+  }
+}
+
+.button {
+  @mixin responsive padding-inline, 16, 16;
+  @mixin responsive padding-block, 6, 6;
+  @mixin responsive-font 14, 14, 1.42, 400;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}

@@ -35,4 +35,12 @@
 
   --checkbox-label-dark: #fff;
   --checkbox-label-light: #000;
+
+  --button-background: #222222;
+
+  --dropdown-background-dark: #3c3c3c;
+  --dropdown-background-light: #ececed;
+
+  --dropdown-button-dark: #2b2b2b;
+  --dropdown-button-light: #4f4f4f;
 }
