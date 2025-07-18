@@ -31,3 +31,19 @@
   background-image: url("/assets/icons/check-mark.svg");
   background-size: 100%;
 }
+
+.label {
+  @mixin responsive-font 11, 16, 1, 400;
+}
+
+html[data-theme="light"] {
+  .label {
+    color: var(--checkbox-label-light);
+  }
+}
+
+html[data-theme="dark"] {
+  .label {
+    color: var(--checkbox-label-dark);
+  }
+}

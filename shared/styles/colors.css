@@ -32,4 +32,7 @@
   --separator-text-dark: #a6a6a6;
 
   --checkbox-dark: #222222;
+
+  --checkbox-label-dark: #fff;
+  --checkbox-label-light: #000;
 }
