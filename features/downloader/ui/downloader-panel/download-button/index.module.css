@@ -8,10 +8,17 @@
   @mixin responsive padding-inline, 10, 10;
   @mixin responsive padding-block, 2, 2;
   @mixin responsive --border-radius, 30, 30;
+  @mixin transition opacity;
 
   background-color: var(--button-background);
   color: var(--checkbox-label-dark);
   border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 .dropdown {

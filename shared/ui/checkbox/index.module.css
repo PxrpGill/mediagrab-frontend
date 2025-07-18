@@ -4,6 +4,12 @@
   align-items: center;
   display: flex;
   width: fit-content;
+
+  @media (hover: hover) {
+    &:hover .label {
+      opacity: 0.8;
+    }
+  }
 }
 
 .checkbox {
@@ -33,6 +39,7 @@
 }
 
 .label {
+  @mixin transition opacity;
   @mixin responsive-font 11, 16, 1, 400;
 }
 
