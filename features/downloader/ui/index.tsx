@@ -1,6 +1,7 @@
 "use client";
 
-import { MouseEvent, useState } from "react";
+import type { MouseEvent } from "react";
+import { useState } from "react";
 
 import { DownloaderPanel } from "./downloader-panel";
 import css from "./index.module.css";

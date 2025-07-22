@@ -1,11 +1,11 @@
 import cx from "clsx";
+import type { MouseEvent } from "react";
 
 import { SEARCH_FORM_CONSTANTS } from "@/features/downloader/models/search-form.constants";
 // import LoaderIcon from "@/public/assets/icons/loader.svg";
 import SearchIcon from "@/public/assets/icons/search.svg";
 
 import css from "./index.module.css";
-import { MouseEvent } from "react";
 
 type SearchFormProps = {
   handleClick: (event: MouseEvent<HTMLButtonElement>) => void;

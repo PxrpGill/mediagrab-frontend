@@ -6,7 +6,7 @@
 }
 
 .title {
-  @mixin responsive-font 14, 24, 1, 500;
+  @mixin responsive-font 16, 24, 1, 500;
 }
 
 .author {

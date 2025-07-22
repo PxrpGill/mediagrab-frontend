@@ -12,9 +12,14 @@ type DownloaderPanelProps = {
 export const DownloaderPanel = ({ isClicked }: DownloaderPanelProps) => {
   return (
     <section className={cx(css.root, { [css.active]: isClicked })}>
-      <ImageElement />
+      <ImageElement className={css.desktopImage} />
       <div className={css.rightPanel}>
-        <PostName title="Сколько стоят деньги?" author="Хаски" />
+        <PostName
+          title="Сколько стоят деньги?"
+          author="Хаски"
+          className={css.name}
+        />
+        <ImageElement className={css.mobileImage} />
         <DownloaderForm />
       </div>
     </section>

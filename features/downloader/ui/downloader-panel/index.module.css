@@ -4,7 +4,7 @@
   @mixin responsive padding-block, 15, 30;
   @mixin responsive padding-inline, 15, 40;
   @mixin responsive width, 370, 680;
-  @mixin responsive border-radius, 60, 60;
+  @mixin responsive border-radius, 30, 60;
 
   opacity: 0;
   visibility: hidden;
@@ -14,6 +14,21 @@
 
   &.active {
     animation: show 0.5s cubic-bezier(0.55, 0, 0.1, 1) 0.2s forwards;
+  }
+}
+
+.desktopImage {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobileImage {
+  @mixin responsive margin-block-end, 10;
+  align-self: center;
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -27,6 +42,10 @@
     opacity: 1;
     visibility: visible;
   }
+}
+
+.name {
+  @mixin responsive padding-block-end, 10;
 }
 
 html[data-theme="light"] {
@@ -46,4 +65,5 @@ html[data-theme="dark"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }

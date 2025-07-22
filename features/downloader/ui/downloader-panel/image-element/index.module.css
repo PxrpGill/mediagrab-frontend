@@ -1,10 +1,11 @@
 .root {
-  @mixin responsive width, 155, 278;
-  @mixin responsive height, 113, 202;
+  @mixin responsive width, 230, 278;
+  @mixin responsive height, 170, 202;
   @mixin responsive border-radius, 29, 29;
 
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 
   background-color: var(--search-button-background-dark);
 }

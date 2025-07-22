@@ -12,12 +12,17 @@
   &.active {
     translate: 0% 0%;
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .input {
   @mixin responsive --border-radius, 128, 128;
   @mixin responsive padding-block, 19, 29;
   @mixin responsive padding-inline, 26, 26;
+  @mixin responsive-font 15, 20, 1, 400;
 
   width: 100%;
   border-radius: var(--border-radius) 0 0 var(--border-radius);
